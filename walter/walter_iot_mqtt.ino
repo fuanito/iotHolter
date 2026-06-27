@@ -1,7 +1,7 @@
 /*
  * IoTHolter Firmware
  *
- * Copyright (c) 2026 Juan Pablo Aguilera
+ * Copyright (c) 2026 Ruth Escobedo-Carranza et al.
  *
  * This firmware incorporates components derived from:
  *
