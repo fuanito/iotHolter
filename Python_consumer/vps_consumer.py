@@ -34,8 +34,8 @@ MQTT_PASSWORD = "PASWORD_HERE"
 MQTT_TOPIC = "iotholter/device/+/ecg"
 # InfluxDB
 INFLUX_URL = "http://localhost:8086"
-INFLUX_TOKEN = "RguJK5Z-EBVanFFl2_8sIvZ5on57skNov0jZMK1_Oa4lDYh9ayxsm0MFpzDHHuFUQDQ_hHRhZg-7_o3Ba2lnjw=="
-INFLUX_ORG = "TecNM Celaya"
+INFLUX_TOKEN = "INFLUX_TOKEN_HERE"
+INFLUX_ORG = "INFLUX_ORGANIZATION"
 INFLUX_BUCKET = "holter"
 
 #Statistics
@@ -95,7 +95,7 @@ def on_message(client, userdata, msg):
             elif seq != expected: #por perdida
                 lost = seq - expected
                 lost_packets[device] += lost
-                print(f"WARNING Device{device} "f"Esperando{expected} "f"Recibido{seq} "f"Perdidios={lost} "f"Total={lost_packets[device]}")
+                print(f"WARNING Device{device} "f"WAITING{expected} "f"SEQ{seq} "f"LOST={lost} "f"Total={lost_packets[device]}")
         last_seq[device]=seq
 
         samples = payload["samples"]
